@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="font_1045104_l8x0teynqng/iconfont.css" />
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			body{
+				overflow-x: hidden;
+				overflow-y: auto;
+			}
+			.biaobai{
+				width: 100%;
+				height: 100%;
+				background: url(img/bj.jpg) no-repeat 0 0;
+				background-size:100% 100%;
+				line-height: 20vw;
+				font-size: 6.2vw;
+				box-sizing: border-box;
+				padding: 10%;
+				text-align: left;
+				position: relative;
+				font-weight: 700;
+				color: sandybrown;
+			}
+			.yinyue{
+				width: 16vw;
+				height: 16vw;
+				border-radius:50% ;
+				position: absolute;
+				top: 5vw;
+				right: 5vw;
+				background: url(img/yinyue.jpg) no-repeat 0 0;
+				background-size:14vw 16vw ;
+			}
+			.biaobai span{
+				color: deeppink;
+				font-size:7vw ;
+				font-weight: 700;
+			}
+			.xihuan{
+				width: 100%;
+				height: 100%;
+				background: url(img/bj2.jpg) no-repeat 0 0;
+				background-size:100% 100%;
+				overflow: hidden;
+			}
+			#ss{
+				display: block !important;
+				width: 10vw;
+				height: 10vw;
+				font-size: 10vw !important;
+				color: red;
+			}
+			.shijian{
+				width: 100%;
+				height: 20vw;
+				display: flex;
+				justify-content: space-around;
+				margin-top: 30vw;
+			}
+			
+			.tian,.shi,.fen,.miao{
+				width: 20vw;
+				height: 20vw;
+				background: rgba(0,0,0,0.2);
+				/*float: left;*/
+				font-size: 5vw;
+				text-align: center;
+				line-height: 20vw;
+				color: palevioletred;
+				font-weight: 700;
+				
+				
+			}
+			.touxiang{
+				width: 90%;
+				height: 25vw;
+				margin: 0 auto;
+				margin-top: 30vw;
+				position: relative;
+			}
+			.tou1,.tou2{
+				width: 25vw;
+				height: 25vw;
+				border-radius:50% ;
+				
+			}
+			.tou1{
+				background: url(img/tou1.jpg) no-repeat 0 0;
+				background-size:25vw 25vw ;
+				float: left;				
+			}
+			.tou2{
+				background: url(img/tou2.jpg) no-repeat 0 0;
+				background-size:25vw 25vw ;
+				float: right;
+			}
+			.dian1,.dian2{
+				position: absolute;
+				
+			}
+			.dian1{
+				top:2vw;
+				left: 25vw;
+			}
+			.dian2{
+				bottom: 2vw;
+				right: 25vw;
+			}
+			.xihuan span{
+				display: block;
+				width: 100%;
+				height: 10vw;
+				line-height: 10vw;
+				text-align: center;
+				color: peachpuff;
+				font-size: 5vw;
+				font-weight: 700;
+				/*margin: 10vw 0;*/
+				/*margin-top: 10vw;*/
+			}
+			.meitian{
+				margin-top: 10vw;
+			}
+			.rizi{
+				margin-top: 5vw;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="biaobai">
+			不间断的<span class="biaobai-tian"></span><br/>我已不知什么时候起，就喜欢上了我们的<span>孙梦妹子</span>，她温柔，漂亮，懂事，有责任感，有上进心。
+			未来还要一直做对方的小太阳呀，bling bling 散发光和热。
+			<div class="yinyue">
+				<audio  autoplay="autoplay"  type="audio/mpeg" id="yy" loop="loop">
+					<source src="media/q.mp3"/>
+				</audio>
+				<!--<embed src="media/苏打绿-小情歌.mp3" type="" />-->
+			</div>
+			
+		</div>
+		<div class="xihuan">
+			<div class="shijian">
+				<div class="tian"></div>
+				<div class="shi"></div>
+				<div class="fen"></div>
+				<div class="miao"></div>
+			</div>
+			
+			<div class="touxiang">
+				<div class="tou1"></div>
+				<div class="tou2"></div>
+				
+				<i class="iconfont icon-aixin dian1" id="ss"></i>
+				<i class="iconfont icon-aixin dian2" id="ss"></i>
+				
+			</div>
+			
+			<span class="meitian">每天，每时，每分，每秒，都喜欢你</span>
+			<span class="rizi">请相信我，说到的，一定会做到</span>
+			<span class="rizi">我一定会给孙梦妹子幸福的生活</span>
+			<span class="rizi">未来的日子，也要一起努力，一起加油</span>
+			
+		</div>
+		
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/tools.js"></script>
+<script type="text/javascript">
+	
+	
+	
+	//音乐
+	var yy=$("#yy");
+	var yin=$(".yinyue")[0];
+//	console.log(yy);
+//	yy.autoplay=true;
+	var yinyue=1;
+	
+		
+	var jiaodu=0;
+	var xuanzhuan;
+	function move(){
+		xuanzhuan=setInterval(function(){
+		if(jiaodu>=360){
+			jiaodu=0;
+		}
+		
+		yin.style.transform="rotateZ("+jiaodu+"deg)";
+		jiaodu+=2;
+	},1000/120)
+	}
+	
+	move();
+	
+	
+	yin.addEventListener("click",function(){
+		if(yinyue==1){
+			clearInterval(xuanzhuan);
+			yy.pause();
+			yinyue=2;
+		}else{
+			move();
+			yy.play();
+			yinyue=1;
+		}
+		
+		console.log(yinyue)
+	})
+	
+
+	
+	
+	
+	
+	
+	
+	var tianshu=$(".biaobai-tian")[0];
+	var tian=$(".tian")[0];
+	var shi=$(".shi")[0];
+	var fen=$(".fen")[0];
+	var miao=$(".miao")[0];
+	var startTime=new Date(2017,1,26,0,0,0);
+	var dian1=$(".dian1")[0];
+	var dian2=$(".dian2")[0];
+	//计时器的改变 
+	setInterval(function(){
+		var nowTime=Date.now();    //当前时间戳
+		var totalTime=nowTime-startTime.getTime();    //总毫秒数
+		var day=parseInt(totalTime/(1000*60*60*24))+"天";
+		tianshu.innerText=day;
+		tian.innerText=day;
+		var nowday=new Date();
+		shi.innerText=nowday.getHours()+"时";
+		fen.innerText=nowday.getMinutes()+"分";
+		miao.innerText=nowday.getSeconds()+"秒";
+		
+	},1000/60)
+	//爱心的运动,总共运动距离是30vw,要求3s内运动完单程，每毫秒运动0.01vw,
+	var i=0;
+	var s=0;
+	var l=0;
+	var r=0;
+	
+//	左心运动
+	setInterval(function(){
+		
+		var m=25+i;
+		if(m>=55){
+			l=1;
+		}
+		if(m<=25){
+			l=0;
+		}
+		dian1.style.left=m+"vw";
+		
+		if(l==0){
+			i+=0.1;
+		}
+		if(l==1){
+			i-=0.1;
+		}
+	},1)
+	
+//	右心运动
+	setInterval(function(){
+		
+		var n=55+s;
+		if(n>=55){
+			r=1;
+		}
+		if(n<=25){
+			r=0;
+		}
+		dian2.style.left=n+"vw";
+		
+		if(r==0){
+			s+=0.1;
+		}
+		if(r==1){
+			s-=0.1;
+		}
+	},1)
+	
+</script>

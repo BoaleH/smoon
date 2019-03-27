@@ -1,0 +1,17 @@
+{
+  "index.html": {
+    "href": "index.html",
+    "resources": [
+      "js/tools.js",
+      "font_1045104_l8x0teynqng/iconfont.css",
+      "img/bj.jpg",
+      "img/yinyue.jpg",
+      "img/bj2.jpg",
+      "img/tou1.jpg",
+      "img/tou2.jpg",
+      "media/q.mp3"
+    ],
+    "refer": [],
+    "priority": 0
+  }
+}
